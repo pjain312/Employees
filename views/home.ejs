@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>
+        <%= locals.title %>
+    </title>
+</head>
+
+<body>
+    <div id="particles-js">
+    </div>
+      <div class="top">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="Heading">
+                            <h1 class="km1">Employees</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="desc">
+                                <div class="row margin">
+                                    <form class="col s12" method="POST" action="/create-emp">
+                                            <h5 class="fontsbypj">Name</h5>  
+                                            <div class="input-field col s12">
+                                                <input id="textarea1" name="empname" class="materialize-textarea" placeholder="Name">
+                                            </div>
+                                            <h5 class="fontsbypj">Role</h5>  
+                                            <div class="input-field col s12">
+                                                <input id="textarea1" name="role" class="materialize-textarea" placeholder="Role">
+                                            </div>
+                                            <h5 class="fontsbypj">Email</h5>  
+                                            <div class="input-field col s12">
+                                                <input id="textarea1" name="email" class="materialize-textarea" placeholder="Email">
+                                            </div>
+                        
+                                            <hr>
+                                            <div class="buttons">
+                                                <button class="btn btn-primary button1" type="submit"><i class="fas fa-plus"></i> &nbsp;&nbsp;ADD EMPLOYEE</button>
+                                            </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <% for (let i of emp){ %>
+                    <li>
+                        <div class="tasks">
+                            <div class="item"> Name &nbsp;: &nbsp; <%=i.empname %></div>  
+                            <div class="item"> Role &nbsp;: &nbsp; <%= i.role %> </div>
+                            <div class="item"> Email &nbsp;: &nbsp; <%= i.email %></div>
+                        </div>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+
+   
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/particle.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.fontsbypj {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+.km1 {
+  font-size: 40px!important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+canvas{
+  display: block;
+}
+
+.top{
+  color: white;
+  margin: 0;
+  z-index: 2;
+}
+
+#particles-js canvas{
+  position: absolute;
+}
+
+#particles-js {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+	background-color: black;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.Heading {
+  text-align: center;
+}
+.desc {
+  text-align: center;
+}
+
+.input-field input{
+  position: relative;
+  width: 70%;
+  border-bottom: 2px solid white;
+  margin-left: 0%;
+  background-color: none;
+  color: white;
+} 
+
+::placeholder{
+  color: darkgray;
+  padding-left: 3%;
+}
+
+.buttons {
+  margin-top: 8%;
+  text-align: center;  
+}
+
+.buttons .button1 {
+  margin: auto;
+  width: 20%;
+  height: 20%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  border-radius: 20%;
+}
+.button1:hover{
+  background-color: white;
+  color: black;
+}
+
+.tasks {
+  position: relative;
+  border-radius: 7%;
+  margin-left: 20%;
+  margin-top: 1%;
+  border: 1.5px solid white;
+  width: 60%;
+  font-weight: 600;
+  padding: 1%; 
+  vertical-align: middle;
+  word-break: break-all ;
+}
+.tasks:hover{
+  background-color: white;
+}
+.tasks:hover .item{
+  color: black;
+}
+.item {
+  margin-left: 4%;
+  margin-bottom: 1%;
+  color: white;
+  font-size: 20px;
+}
+
