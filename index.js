@@ -19,36 +19,7 @@ app.use(express.urlencoded());
 
 app.use(express.static('assets'));
 
-
-
-app.get('/', function(req,res){
-    Emp.find({},function(err,emp){
-        if(err){
-            console.log('Error in fetching employees');
-            return;
-        }
-        return res.render('home',{
-            title : "Employees",
-            emp : emp
-        });
-    });
-    
-});
-
-app.post('/create-emp',function(req,res){
-
-    Emp.create({
-        empname: req.body.empname,
-        role: req.body.role,
-        email: req.body.email
-    } , function(err,newEmp){
-            if(err){console.log('error in creating a new employee');
-            return;
-        }
-        console.log('*******',newEmp);
-        return res.redirect('back');
-        });
-});
+app.use('/', require('./routes/index'));
 
 app.listen(port, function(err)
 {
